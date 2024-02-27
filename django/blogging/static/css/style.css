@@ -36,20 +36,23 @@ textarea { overflow:auto; }
 
 
 #main { width: 932px; padding: 37px 24px 17px 24px; }
-#main h3 { font-size: 12px; line-height: 15px; color: #000; text-transform: uppercase; border-bottom: 1px solid #dbdbdb; padding: 0 0 9px 0; }
+#main h3 { font-size: 20px; line-height: 15px; color: #000; text-transform: uppercase; border-bottom: 1px solid #dbdbdb; padding: 0 0 9px 0; }
 #main a.more:hover { text-decoration: none; }
 
-#content { width: 905px; }
+#content { width: 905px; 
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+}
 
-
-.highlight h3 { margin: 0 0 9px 0; }
+.highlight h3 { margin: 0 0 18px 0; }
 .highlight p { padding: 0 0 11px 0; }
 .highlight img { margin: 4px 12px 0 12px; }
 
 .projects { padding: 10px 0 0 0; }
 .projects h3 { margin: 0 0 17px 0; }
 .projects .item { margin: 0 0 28px 0; }
-.projects .image { width: 183px; height: 111px; border: 0px solid #dbdbdb; padding: 2px; margin: 0 20px 0 3px; }
+.projects .image { width: 183px; height: 111px; border: 0px solid #dbdbdb; padding: 10px; margin: 0 20px 0 3px; }
 .projects .text { width: 600px; }
 .projects .text h4 { font-size: 12px; line-height: 15px; color: #333; text-transform: uppercase; padding: 3px 0 2px 0; }
 .projects .text p { padding: 0 0 3px 0; }
@@ -66,3 +69,39 @@ textarea { overflow:auto; }
 #footer { font-family: Arial, sans-serif; font-size: 11px; line-height: 14px; color: #7f7f7f; padding: 18px 27px 20px 38px; }
 #footer a{ color: #7f7f7f; }
 
+.form-comment{
+    font-size: 18px;
+    padding: 10px;
+}
+
+.form-comment label{
+    margin: 10px 10px;
+}
+
+.form-comment input{
+    border-radius: 15px;
+    padding: 15px;
+    height: 50px;
+    width: 250px;
+
+}
+
+.form-comment textarea{
+    border-radius: 15px;
+    padding: 15px;
+    height: 150px;
+    width: 100%;
+    resize: vertical;
+}
+
+.form-comment div{
+    margin: 10px;
+    
+}
+
+.view-comment{
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 15px;
+}
