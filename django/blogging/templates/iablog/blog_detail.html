@@ -1,13 +1,14 @@
 {% load static %}
 <html >
 <head>
-	<title>Мой блог</title>
+	<title>Roblox NEWS</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
-	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="shortcut icon" href="{% static 'css/logo.jpg' %}" />
 
 </head>
 <body>
+
 <div class="shell">
 	<div class="border">
 		<div id="navigation">
@@ -28,6 +29,7 @@
 					<div class="item">
 						<div class="text left">
 							<p>{{ post.description }}</p>
+							<br>
 							<p>Автор: {{ post.author }}</p>
 						</div>
 						<div class="cl">&nbsp;</div>
