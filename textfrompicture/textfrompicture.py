@@ -1,10 +1,9 @@
-#pip install pytesseract pillow
-#sudo apt install tesseract-ocr
-
 import pytesseract
 from PIL import Image
+
+
 #открываем файл
-picture = Image.open('1.jpeg')
+picture = Image.open('001-002.jpg')
 #считываем имя файла и берем название до точки
 file_name = picture.filename
 file_name = file_name.split(".")[0]
