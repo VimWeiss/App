@@ -7,7 +7,7 @@ soup = BeautifulSoup(response.text, 'lxml')
 
 paragraph = soup.find_all(class_='question')
 
-file = open("parsing.txt", "w")
+file = open("parsing.txt", "a")
 
 for item in paragraph:
     paragraph_text = item.text
