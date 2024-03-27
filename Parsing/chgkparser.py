@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
-url = 'https://db.chgk.info/tour/disharm5_u'
+url = 'https://db.chgk.info/tour/balkan23_u'
 response = requests.get(url)
 response.raise_for_status()
 soup = BeautifulSoup(response.text, 'lxml')
