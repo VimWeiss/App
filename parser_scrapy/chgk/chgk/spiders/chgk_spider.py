@@ -1,21 +1,21 @@
 import scrapy
-from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
+from scrapy.spiders import CrawlSpider, Rule
 
-#https://db.chgk.info/tour/balkan23_u
-#https://db.chgk.info/tour/chmok17_u
-#https://db.chgk.info/question/balkan23_u.1/11
-
-class ChgkSpider(CrawlSpider):
-    name = 'chgk_spider'
-    start_urls = ['https://db.chgk.info/']
-    rules = (
-        Rule(LinkExtractor(allow='tour')),
-        Rule(LinkExtractor(allow='question'), callback='parse_items'),
-        Rule(LinkExtractor(allow='answer'), callback='parse_items')
-    )
+class OnePageSpider(CrawlSpider):
+    # name – имя паука
+    name = "chgk_spider"
+    # allowed_domains – домены сайта, в пределах которого необходимо сканировать
+    allowed_domains = ["www.db.chgk.info"]
+    # start_urls – список начальных адресов
+    start_urls = ["https://db.chgk.info/tour/balkan23_u"]
     
-    def parse_items(self, response):
-        yield {
-            'question':response.css('p::text').get().strip()
-        }
+    # rules - правила, определяющие поведение паука
+    # первое правило: проваливаемся внутрь отзыва для того, чтобы достать заголовок и текст отзыва
+    rules = (Rule(LinkExtractor(restrict_xpaths="//div"), callback='parse_item', follow = True),
+            )
+    def parse_item(self, response):
+        item = {}
+        item['question'] = response.xpath("//div[contains(@class, 'question')]/text()").get().strip()
+        item['answer'] = response.xpath("//div[contains(@class, 'answer')]/text()").get().strip()
+        return item
