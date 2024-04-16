@@ -14,7 +14,7 @@
             <a href="#" class="text-lg font-semibold hover:text-gray-500">Новый</a>
             <a href="#" class="text-lg font-semibold hover:text-gray-500">Просмотр</a>
 
-            <a href="#" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Регистрация</a>
+            <a href="{% url 'mercury_core:signup' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Регистрация</a>
             <a href="#" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Войти</a>
         </div>
     </nav>
@@ -34,7 +34,7 @@
 
             <ul class="space-y-2">
                 <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">О нас</a></li>
-                <li><a href="{% url 'contact' %}" class="text-lg text-teal-500 hover:text-teal-700">Контакты</a></li>
+                <li><a href="{% url 'mercury_core:contact' %}" class="text-lg text-teal-500 hover:text-teal-700">Контакты</a></li>
                 <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Конфиденциальность</a></li>
                 <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Соглашение</a></li>
             </ul>

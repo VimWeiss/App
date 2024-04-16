@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from item.models import Category, Item
 
+from .forms import SignupForm
+
 def index(request):
     items = Item.objects.filter(is_sold=False)[0:6]
     categories = Category.objects.all()
@@ -13,5 +15,12 @@ def index(request):
 
 def contact(request):
     return render(request, 'mercury_core/contact.html')
+
+def signup(request):
+    form = SignupForm()
+    
+    return render(request, 'mercury_core/signup.html', {
+        'form':form
+    })
 
 
