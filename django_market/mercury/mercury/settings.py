@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mercury_core',
+    'dashboard',
     'item',
 ]
 
