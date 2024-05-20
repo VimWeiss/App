@@ -57,6 +57,7 @@ header {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   }
   .item .item-in {
     background: #fff;

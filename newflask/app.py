@@ -18,7 +18,8 @@ def index():
 
 @app.route('/posts')
 def posts():
-    return render_template('posts.html')
+    posts = Post.query.all()
+    return render_template('posts.html', posts=posts)
 
 @app.route('/create', methods=['POST', 'GET'])
 def create():
