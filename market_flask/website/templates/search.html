@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %} Search {% endblock %}
+{% block title %} Поиск {% endblock %}
 
 
 {% block body %}
 
 {% if items | length < 1 %}
-<h3 style="color: white;">No Items Match your Search query</h3>
+<h3 style="color: white;">Нет товаров</h3>
 
 {% else %}
 
@@ -28,18 +28,18 @@
             
                 <div class="col">
 
-                    <h5 style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">Ksh {{ item.current_price }}</h5>
-                    <strike><p style="color: gray;">Ksh {{ item.previous_price}}</p></strike>
+                    <h5 style="font-weight: 600; font-family: 'Times New Roman', Times, serif;">{{ item.current_price }} руб </h5>
+                    <strike><p style="color: gray;">{{ item.previous_price}}  руб</p></strike>
                 </div>
 
                 <div class="col">
-                    <a href="/add-to-cart/{{ item.id }}">Add</a>
+                    <a href="/add-to-cart/{{ item.id }}">Добавить</a>
                 </div>
             
             </div>
 
             <div class="row">
-                <p>{{ item.in_stock }} Items Left</p>
+                <p>{{ item.in_stock }} осталось</p>
             </div>
         </div>
     

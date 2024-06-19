@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} View Orders {% endblock %}
+{% block title %} Просмотреть заказы {% endblock %}
 
 
 {% block body %}
@@ -9,19 +9,19 @@
     <thead>
         <tr>
 
-            <th scope="col">Order ID</th>
-            <th scope="col">Payment ID</th>
+            <th scope="col">Номер заказа</th>
+            <th scope="col">Номер оплаты</th>
 
-            <th scope="col">UserName</th>
-            <th scope="col">Customer Email</th>
+            <th scope="col">Имя пользователя</th>
+            <th scope="col">Продавец</th>
 
-            <th scope="col">Product Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Quantity</th>
+            <th scope="col">Название</th>
+            <th scope="col">Цена</th>
+            <th scope="col">Количество</th>
 
-            <th scope="col">Picture</th>
-            <th scope="col">Status</th>
-            <th scope="col">Action</th>
+            <th scope="col">Изображение</th>
+            <th scope="col">Статус</th>
+            <th scope="col">Состояние</th>
 
 
         </tr>
@@ -47,7 +47,7 @@
             <td>{{ order.status}}</td>
 
             <td>
-                <a href="/update-order/{{ order.id }}">Update Status</a>
+                <a href="/update-order/{{ order.id }}">Обновить статус</a>
             </td>
 
 

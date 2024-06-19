@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %} Orders {% endblock %}
+{% block title %} Заказы {% endblock %}
 
 {% block body %}
 
@@ -9,7 +9,7 @@
     <div class="row">
         {% if orders %}
 
-        <h1 class="text-center mb-5" style="color: white;">Orders</h1>
+        <h1 class="text-center mb-5" style="color: white;">Заказы</h1>
         <div class="col-sm-13">
             <div class="card">
                 <div class="card-body">
@@ -23,12 +23,12 @@
                         <div class="col-sm-7">
                             
                             <h3>{{ item.product.product_name }}</h3>
-                            <p class="mb-2 text-muted small">Quantity: {{ item.quantity }}</p>
-                            <p class="mb-2 text-muted small">Price: Ksh {{ item.price }}</p>
+                            <p class="mb-2 text-muted small">Количество: {{ item.quantity }}</p>
+                            <p class="mb-2 text-muted small">Цена: {{ item.price }} руб</p>
                                
                                 
                             <div class="col-sm-4">
-                                <p>Order Status: {{ item.status }}</p>
+                                <p>Статус заказа: {{ item.status }}</p>
                                 {% if item.status == 'Pending' %}
                                 <div class="progress">
                                     <div class="progress-bar" role="progressbar" style="width: 20%;"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
@@ -65,7 +65,7 @@
         </div>
 
         {% else %}
-        <h1 class="text-center mb-5" style="color: white;">You have no Orders</h1>
+        <h1 class="text-center mb-5" style="color: white;">У вас нет заказаов</h1>
 
         {% endif %}
     </div>

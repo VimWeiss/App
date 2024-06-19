@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %} Shop Items {% endblock %}
+{% block title %} Товары магазина {% endblock %}
 
 
 {% block body %}
 
 {% if items | length < 1 %}
-<h3 style="color: white;">No Shop Items </h3>
+<h3 style="color: white;">Нет товаров </h3>
 
 {% else %}
 
@@ -14,14 +14,14 @@
     <thead>
         <tr>
             <th scope="col">ID</th>
-            <th scope="col">Date Added</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Previous Price</th>
-            <th scope="col">Current Price</th>
-            <th scope="col">In Stock</th>
-            <th scope="col">Product Picture</th>
-            <th scope="col">Flash Sale</th>
-            <th scope="col">Action</th>
+            <th scope="col">Дата добавления</th>
+            <th scope="col">Название</th>
+            <th scope="col">Предыдущая цена</th>
+            <th scope="col">Текущая цена</th>
+            <th scope="col">В наличии</th>
+            <th scope="col">Изображение товара</th>
+            <th scope="col">Распродажа</th>
+            <th scope="col">ОК</th>
         </tr>
     </thead>
 
@@ -40,9 +40,9 @@
 
 
             <td>
-                <a href="/update-item/{{ item.id }}">Update</a>
+                <a href="/update-item/{{ item.id }}">Обновить</a>
                 <br>
-                <a href="/delete-item/{{ item.id }}">Delete</a>
+                <a href="/delete-item/{{ item.id }}">Удалить</a>
             </td>
 
         </tr>
