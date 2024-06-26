@@ -8,9 +8,50 @@ def main(page:Page):
     PINK = '#ed0c79'
     TEXCOL = 'white'
     
+    circle = Stack(
+    controls=[
+      Container(
+        width=100,
+        height=100,
+        border_radius=50,
+        bgcolor='white12'
+        ),
+      Container(
+                  gradient=SweepGradient(
+                      center=alignment.center,
+                      start_angle=0.0,
+                      end_angle=3,
+                      stops=[0.5,0.5],
+                  colors=['#00000000', PINK],
+                  ),
+                  width=100,
+                  height=100,
+                  border_radius=50,
+                  content=Row(alignment='center',
+                      controls=[
+                        Container(padding=padding.all(5),
+                          bgcolor=BG,
+                          width=90,height=90,
+                          border_radius=50,
+                          content=Container(bgcolor=FG,
+                            height=80,width=80,
+                            border_radius=40,
+                          content=CircleAvatar(opacity=0.8,
+                foreground_image_url="https://github.com/VimWeiss/App/blob/main/todo_flutter/q.jpeg"
+            )
+                          )
+                          )
+                      ],
+                  ),
+              ),
+      
+    ]
+  )
+    
     def shrink(e):
         page_2.controls[0].width = 120
         page_2.controls[0].scale = transform.Scale(0.8, alignment=alignment.center_right)
+        page_2.controls[0].border_radius=border_radius.only(top_left=35, top_right=0, bottom_left=35, bottom_right=0)
         page_2.update()
     
     def restore(e):
@@ -34,18 +75,13 @@ def main(page:Page):
     tasks = Column(
         height=400,
         scroll='auto',
-        #controls=[Container(height=50, width=300, bgcolor='red'),
-        #          Container(height=50, width=300, bgcolor='red'),
-        #          Container(height=50, width=300, bgcolor='red'),
-        #          Container(height=50, width=300, bgcolor='red'),],
-        
     )
     
     for i in range(10):
         tasks.controls.append(
             Container(height=50, 
                       width=400, 
-                      bgcolor=BG, 
+                      bgcolor='blue', 
                       border_radius=25, padding = padding.only(left=15, top=13),
                       content=CustomCheckBox(PINK, label='Введите запись',),)
         )
@@ -109,7 +145,37 @@ def main(page:Page):
         ])
     )
     
-    page_1 = Container()
+    page_1 = Container(
+        width=400,
+        height=850,
+        bgcolor=BG,
+        border_radius=35,
+        padding = padding.only(left=50, top=60,right=200),
+        
+        content = Column(
+            controls=[
+            Row(alignment='end',
+                    controls=[
+                                Container(border_radius=25, padding = padding.only(top=13, left=13),
+                                height=50, width=50, border = border.all(color='white', width=15),
+                                on_click=lambda e: restore(e),
+                                content=Text('>')
+                )
+            ]
+                ),
+            circle,
+            Text('Вадим \n Яшкин', size=20,weight='bold', color='white'),
+            Container(height=20),
+            Row(controls=[
+                Icon(icons.FAVORITE_BORDER_SHARP, color='white'),
+                Text('Избранное', color='white'),
+                
+            ]  
+            )
+            ]
+        )
+    )
+    
     page_2 = Row(alignment='end',
                 controls=[Container(
                                 width=400,
