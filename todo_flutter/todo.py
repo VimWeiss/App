@@ -209,14 +209,6 @@ def main(page:Page):
              '/create_task':View("/create_task", [create_task_view],)
              }
     
-#    def route_change():
-#        page.views.clear()
-#        page.views.append(
-#           View(
-#                "/",
-#                [container],
-#            )
-#        )
         
     def route_change(route):
         page.views.clear()
