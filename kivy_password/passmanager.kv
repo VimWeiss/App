@@ -1,0 +1,59 @@
+View
+
+
+<View>:
+    orientation: "vertical"
+    website_input: website_input
+    email_input: email_input
+    password_input: password_input
+    padding: 20
+    spacing: 50
+
+    Label:
+        text: 'МЕНЕДЖЕР ПАРОЛЕЙ'
+    BoxLayout:
+        TextInput:
+            id: website_input
+            background_color: root.input_color
+            foreground_color: root.white
+            hint_text: 'Название сайта'
+            size_hint: .7, None
+            height: '40'
+        Button:
+            text: 'ЗАГРУЗИТЬ'
+            background_color: root.btn_color
+            background_normal: ''
+            size_hint: .3, None
+            on_press: root.load_profile()
+            height: '40'
+    BoxLayout:
+        TextInput:
+            id: email_input
+            background_color: root.input_color
+            foreground_color: root.white
+            hint_text: 'Логин'
+            size_hint: 1, None
+            height: '40'
+    BoxLayout:
+        TextInput:
+            id: password_input
+            background_color: root.input_color
+            foreground_color: root.white
+            hint_text: 'Пароль'
+            size_hint: .7, None
+            height: '40'
+        Button:
+            text: 'ГЕНЕРАЦИЯ'
+            background_color: root.btn_color
+            background_normal: ''
+            size_hint: .3, None
+            on_press: root.generate_pw()
+            height: '40'        
+    BoxLayout:
+        Button:
+            text: 'СОХРАНИТЬ'
+            background_color: root.btn_color
+            background_normal: ''
+            size_hint: 1, None
+            on_press: root.save_profile()
+            height: '40'
