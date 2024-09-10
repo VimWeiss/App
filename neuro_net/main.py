@@ -6,7 +6,7 @@ def sigmoid(x):
 train_in = np.array([[0,0,1],
                   [1,1,1],
                   [1,0,1],
-                  [0,1,1]])
+                  [0,1,1]]) 
 
 train_out = np.array([[0,1,1,0]]).T
 
