@@ -1,30 +1,36 @@
 import streamlit as st
 
 # Set the page title and layout
-st.set_page_config(page_title="My Portfolio", layout="centered")
+st.set_page_config(page_title="Мое портфолио", layout="centered")
 
 # Sidebar for navigation
-st.sidebar.title("Navigation")
-options = st.sidebar.radio("Go to", ["Home", "Projects", "Contact"])
+st.sidebar.title("Навигация")
+options = st.sidebar.radio("Меню", ["Домой", "Проекты", "Контакты"])
 
 # Home section
-if options == "Home":
-    st.title("Welcome to My Portfolio!")
-    st.image("https://via.placeholder.com/800x300", use_column_width=True)
+if options == "Домой":
+    st.title("Добро пожаловать в мое портфолио!")
+    st.image("./static/portrait.JPG", use_container_width=False, width=200)
     st.write("""
-    ## About Me
-    Hello! I'm a passionate developer with experience in building web applications and data analysis. 
-    I love to explore new technologies and apply them in my projects.
+    ## Немного обо мне
+    Привет, меня зовут Вадим Яшкин и я программист, технолог ERP систем, а также Специалист по кибербезопасности.
+    Я работаю в РЖД
     """)
+    st.markdown("[Скачать мое резюме](./static/resume.pdf)", unsafe_allow_html=True)
 
 # Projects section
-elif options == "Projects":
-    st.title("Projects")
-    st.write("Here are some of the projects I've worked on:")
+elif options == "Проекты":
+    st.title("Мои проекты")
+    st.write("Несколько проектов над которыми я работал:")
 
-    st.subheader("Project 1: Web Scraper")
-    st.write("A web scraper that collects data from various websites and stores it in a structured format.")
-    st.image("https://via.placeholder.com/400x200", use_column_width=True)
+    st.subheader("Проект 1: Решение квадратных уравнений")
+    st.write("Web приложение выполняет решение квадратных уравнений, выводит подробное решение, строит график функции, сохраняет решение в базу данных.")
+    col1, col2 = st.columns(2)
+    with col1:
+        st.image("./static/Screenshot1.png", use_container_width=False, width=200)
+    with col2:
+        st.image("./static/Screenshot2.png", use_container_width=False, width=200)
+    st.markdown("[GitHub репозиторий](https://github.com/VimWeiss/QuadraticSolver)", unsafe_allow_html=True)
 
     st.subheader("Project 2: Data Visualization")
     st.write("An interactive dashboard for visualizing complex datasets using Python and Streamlit.")
@@ -35,7 +41,7 @@ elif options == "Projects":
     st.image("https://via.placeholder.com/400x200", use_column_width=True)
 
 # Contact section
-elif options == "Contact":
+elif options == "Контакты":
     st.title("Contact Me")
     st.write("Feel free to reach out to me through the following channels:")
 
@@ -45,4 +51,4 @@ elif options == "Contact":
 
 # Footer
 st.sidebar.write("---")
-st.sidebar.write("© 2023 My Portfolio")
+st.sidebar.write("© 2025 Мое портфолио")
