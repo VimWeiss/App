@@ -13,7 +13,7 @@ if options == "Домой":
     st.image("./static/portrait.JPG", use_container_width=False, width=200)
     st.write("""
     ## Немного обо мне
-    Привет, меня зовут Вадим Яшкин и я программист, технолог ERP систем, а также Специалист по кибербезопасности.
+    Привет, меня зовут Вадим Яшкин и я программист, технолог ERP систем.
     Я работаю в РЖД
     """)
     st.markdown("[Скачать мое резюме](./static/resume.pdf)", unsafe_allow_html=True)
@@ -21,7 +21,7 @@ if options == "Домой":
 # Projects section
 elif options == "Проекты":
     st.title("Мои проекты")
-    st.write("Несколько проектов над которыми я работал:")
+    st.write("Несколько проектов над которыми я работал в последнее время:")
 
     st.subheader("Проект 1: Решение квадратных уравнений")
     st.write("Web приложение выполняет решение квадратных уравнений, выводит подробное решение, строит график функции, сохраняет решение в базу данных.")
@@ -34,11 +34,11 @@ elif options == "Проекты":
 
     st.subheader("Project 2: Data Visualization")
     st.write("An interactive dashboard for visualizing complex datasets using Python and Streamlit.")
-    st.image("https://via.placeholder.com/400x200", use_column_width=True)
+    st.image("https://via.placeholder.com/400x200", use_container_width=True)
 
     st.subheader("Project 3: Machine Learning Model")
     st.write("A machine learning model that predicts housing prices based on various features.")
-    st.image("https://via.placeholder.com/400x200", use_column_width=True)
+    st.image("https://via.placeholder.com/400x200", use_container_width=True)
 
 # Contact section
 elif options == "Контакты":
@@ -51,4 +51,4 @@ elif options == "Контакты":
 
 # Footer
 st.sidebar.write("---")
-st.sidebar.write("© 2025 Мое портфолио")
+st.sidebar.write("© 2025")
