@@ -32,22 +32,21 @@ elif options == "Проекты":
         st.image("./static/Screenshot2.png", use_container_width=False, width=200)
     st.markdown("[GitHub репозиторий](https://github.com/VimWeiss/QuadraticSolver)", unsafe_allow_html=True)
 
-    st.subheader("Project 2: Data Visualization")
-    st.write("An interactive dashboard for visualizing complex datasets using Python and Streamlit.")
-    st.image("https://via.placeholder.com/400x200", use_container_width=True)
+    st.subheader("Проект 2: Сайт секции Тхэквондо")
+    st.write("Лэндинг для секции тхэквондо с расписанием занятий, галереей и контактной информацией.")
+    st.image("./static/Screenshot3.png", use_container_width=True)
 
-    st.subheader("Project 3: Machine Learning Model")
-    st.write("A machine learning model that predicts housing prices based on various features.")
-    st.image("https://via.placeholder.com/400x200", use_container_width=True)
+    st.subheader("Проект 3: Интернет-магазин на Django")
+    st.write("Небольшой интернет-магазин, написанный на фрэймворке Django")
+    st.markdown("[GitHub репозиторий](https://github.com/VimWeiss/App/tree/743b2ce7a184e29118edadef03769293e15d7dac/django_market/mercury)", unsafe_allow_html=True)
 
 # Contact section
 elif options == "Контакты":
-    st.title("Contact Me")
-    st.write("Feel free to reach out to me through the following channels:")
+    st.title("Связаться со мной")
+    st.write("Доступные способы связи:")
 
-    st.write("Email: myemail@example.com")
-    st.write("LinkedIn: [My LinkedIn Profile](https://www.linkedin.com)")
-    st.write("GitHub: [My GitHub Repositories](https://github.com)")
+    st.write("Email: goodgod08@yandex.ru")
+    st.write("GitHub: [Мой профиль GitHub](https://github.com/VimWeiss)")
 
 # Footer
 st.sidebar.write("---")
